@@ -1,0 +1,14 @@
+name: "Hello World Workflow"
+
+on:
+  push:
+    branches: ["develop"]
+
+jobs:
+  job-testing:
+    runs-on: ubuntu-lastest
+    steps:
+      - run: echo "Pull code"
+      - run: echo "Run migrations"
+      - run: echo "Generate binaries"
+      - run: echo "Post version"
