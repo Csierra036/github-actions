@@ -8,6 +8,7 @@ jobs:
   job-testing:
     runs-on: ubuntu-lastest
     steps:
+      - uses: actions/checkout@v4
       - run: echo "Pull code"
       - run: echo "Run migrations"
       - run: echo "Generate binaries"
