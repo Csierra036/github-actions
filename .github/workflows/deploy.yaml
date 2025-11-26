@@ -13,3 +13,12 @@ jobs:
       - run: echo "Run migrations"
       - run: echo "Generate binaries"
       - run: echo "Post version"
+  
+  job-testing-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Pull code"
+      - run: echo "Run migrations"
+      - run: echo "Generate binaries"
+      - run: echo "Post version"
