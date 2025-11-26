@@ -15,6 +15,7 @@ jobs:
       - run: echo "Post version"
   
   job-testing-2:
+    needs: job-testing # NECESITA EL PRIMER JOB PARA EJECUTARSE
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
