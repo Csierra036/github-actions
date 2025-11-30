@@ -1,25 +1,11 @@
-name: "Hello World Workflow"
+name: deploy-workflow
 
-on:
-  push:
-    branches: ["develop"]
+on: push
 
 jobs:
-  job-testing:
+  first_job:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Pull code"
-      - run: echo "Run migrations"
-      - run: echo "Generate binaries"
-      - run: echo "Post version"
-  
-  job-testing-2:
-    needs: job-testing # NECESITA EL PRIMER JOB PARA EJECUTARSE
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Pull code"
-      - run: echo "Run migrations"
-      - run: echo "Generate binaries"
-      - run: echo "Post version"
+      - name: First Job steps
+        run: "${{secrets.TOKEN_SECRET}}"
