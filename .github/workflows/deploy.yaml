@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: First Job steps
-        run: "${{secrets.TOKEN_SECRET}}"
+        run: echo "${{secrets.TOKEN_SECRET}}"
